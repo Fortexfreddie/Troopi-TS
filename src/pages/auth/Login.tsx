@@ -101,7 +101,7 @@ const Login = () => {
                   backgroundImage:
                     "linear-gradient(to right, #1f2937, #1f2937)",
                 }}
-                type="submit"
+                type="button"
                 className="w-full my-4 p-2 rounded-2xl bg-gray-300 text-sm text-white font-bold cursor-pointer"
               >
                 Log In
