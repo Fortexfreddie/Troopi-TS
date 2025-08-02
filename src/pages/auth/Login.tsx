@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import type { ChangeEvent } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -87,6 +90,8 @@ const Login = () => {
                 </a>
               </span>
               <motion.button
+                onClick={() => navigate("/home")}
+                whileFocus={{ scale: 1.05 }}
                 initial={{ backgroundSize: "0% 100%" }}
                 whileHover={{ backgroundSize: "100% 100%" }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
